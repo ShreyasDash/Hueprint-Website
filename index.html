@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ef">
+    <title>Hueprint — Find the colors in any image</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+    <header class="topbar">
+        <div class="brand"><span class="mark"></span> hueprint</div>
+        <div class="top-note">A little color story, from any image.</div>
+    </header>
+    <main>
+        <section class="hero"><p class="eyebrow">IMAGE COLOR EXPLORER&nbsp; / &nbsp;01</p>
+            <h1>Every image has<br>a <em>color story.</em></h1>
+            <p>Drop in a photo and uncover its ten most common colors. A quick, considered palette—made from your
+                image.</p></section>
+        <section class="workspace" aria-label="Image color analysis">
+            <div class="panel upload-panel">
+                <div class="panel-head"><span class="label">Your image</span><span
+                        class="format">JPG · PNG · WEBP</span></div>
+                <div class="drop" id="drop"><img id="preview" alt="Uploaded image preview">
+                    <div class="empty">
+                        <div class="upload-icon">
+                            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="1.5">
+                                <path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M4 15v4a1 1 0 001 1h14a1 1 0 001-1v-4"/>
+                            </svg>
+                        </div>
+                        <h2>Drop your image here</h2>
+                        <p>Or choose a file from your device</p>
+                        <button class="button" id="browse">Choose an image</button>
+                        <div class="subtext">Up to 20 MB · processed privately in your browser</div>
+                    </div>
+                </div>
+                <input id="file" class="hidden" type="file" accept="image/*"></div>
+            <div class="panel results" id="results">
+                <div class="result-top">
+                    <div><h2 class="result-title">The palette</h2>
+                        <p class="result-sub" id="resultSub">Your top 10 colors will appear here</p></div>
+                    <div style="display:flex;align-items:center;gap:8px"><span class="count">TOP 10</span>
+                        <button class="reset hidden" id="reset">Clear</button>
+                    </div>
+                </div>
+                <div class="palette" id="palette"></div>
+                <div class="list" id="list"></div>
+                <div class="placeholder">
+                    <div>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor"
+                             stroke-width="1.1">
+                            <circle cx="14" cy="14" r="10.5"/>
+                            <circle cx="14" cy="14" r="5.5"/>
+                            <circle cx="14" cy="14" r="1" fill="currentColor"/>
+                        </svg>
+                        Upload an image to see its color story.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><span>Thoughtfully sampled. Always private.</span><span>HUEPRINT&nbsp; © 2026</span></footer>
+</div>
+<div class="toast" id="toast">Copied to clipboard</div>
+<script src="script.js"></script>
+</body>
+</html>
+
